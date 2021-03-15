@@ -1,0 +1,109 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)100%), url(img/background.jpg) center/cover no-repeat;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 2.2rem;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    height: 80px;
+}
+
+.msg {
+    font-size: 4rem;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0px 0px 2px white;
+}
+
+.msg.up {
+    animation: up 0.5s ease-in;
+}
+
+.msg.erase {
+    animation: erase 0.5s ease-in;
+}
+
+/* SLIDE UP IN ANIMATION */
+@keyframes up {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/* SLIDE UP AWAY ANIMATION */
+@keyframes erase {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@media (max-width: 900px) {
+
+    .h1 {
+        font-size: 1.7rem;
+    }
+
+    .message {
+        height: 65px;
+    }
+
+    .msg {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 670px) {
+
+    .h1 {
+        font-size: 1.4rem;
+    }
+
+    .message {
+        height: 50px;
+    }
+
+
+    .msg {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 565px) {
+
+    .h1 {
+        font-size: 1rem;
+    }
+
+    .message {
+        height: 40px;
+    }
+
+    .msg {
+        font-size: 1.7rem;
+    }
+}
